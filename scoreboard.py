@@ -1,11 +1,11 @@
 import pygame.font
 
 
-class Scoreboard():
+class Scoreboard:
     """A class to report scoring information."""
 
     def __init__(self, ai_settings, screen, stats):
-        """Initialize scorekeeping attributes"""
+        """Initialize score keeping attributes"""
         self.screen = screen
         self.screen_rect = screen.get_rect()
         self.ai_settings = ai_settings
@@ -26,10 +26,9 @@ class Scoreboard():
 
         # Display the score at the top right of the screen.
         self.score_rect = self.score_image.get_rect()
-        self.score_rect.right = self.screen_rect.rect.right - 20
+        self.score_rect.right = self.screen_rect.right - 20
         self.score_rect.top = 20
 
     def show_score(self):
         """Draw score to the screen."""
         self.screen.blit(self.score_image, self.score_rect)
-        
